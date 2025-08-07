@@ -36,4 +36,16 @@ public class Contato {
     public Integer getId() {
         return id;
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public String getEmail() {
+        return email;
+    }
 }

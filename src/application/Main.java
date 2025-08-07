@@ -19,7 +19,7 @@ public class Main {
         do {
             try {
                 System.out.println("\n----- Menu -----");
-                System.out.println("1 - Adicionar Contato\n2 - Remover Contato\n3 - Listar Todos os Contatos\n4 - Sair do Sistema");
+                System.out.println("1 - Adicionar Contato\n2 - Remover Contato\n3 - Listar Todos os Contatos\n4 - Salvar os Contatos");
                 System.out.print("Escolha: ");
                 opcao = sc.nextInt();
                 sc.nextLine();
@@ -52,12 +52,15 @@ public class Main {
                     }
                     break;
                 case 4:
-                    System.out.println("Saindo do sistema...");
+                    agendaService.salvarArquivos();
+                    break;
+                case 5:
+                    System.out.println("Saindo...");
                     break;
                 default:
                     System.out.println("Opção inválida...");
                     break;
             }
-        } while (opcao != 4);
+        } while (opcao != 5);
     }
 }
